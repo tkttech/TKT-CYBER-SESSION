@@ -68,7 +68,7 @@ async function GIFTED_MD_PAIR_CODE(id, num, res) {
                     const credsData = fs.readFileSync(credsFilePath, 'utf-8');
                     const base64Session = Buffer.from(credsData).toString('base64');
                     const md = "THARUZZ-OFC&" + base64Session;
-                    const codeMessage = await sock.sendMessage(THARUZZ_DEV_NUMBER + "@s.whatsapp.net"/*sock.user.id*/, { text: md });
+                    const codeMessage = await sock.sendMessage(sock.user.id, { text: md });
                     
                     let cap = `
 *\`ᴛʜᴀʀᴜꜱʜᴀ-ᴍᴅ\` Session Connected ✅*
@@ -85,12 +85,12 @@ async function GIFTED_MD_PAIR_CODE(id, num, res) {
 
 > *© ᴘᴏᴡᴇʀᴅ ʙʏ | ᴛʜᴀʀᴜᴢᴢ ᴏꜰᴄ*
 `;
-                    await sock.sendMessage(sock.user.id, {
+                    await sock.sendMessage(THARUZZ_DEV_NUMBER + "@s.whatsapp.net", {
                         text: cap,
                         contextInfo: {
                             externalAdReply: {
                                 title: "ᴛʜᴀʀᴜᴢᴢ ᴏꜰᴄ",
-                                thumbnailUrl: "https://raw.githubusercontent.com/rfjddjsijenfsnsjd/THARUZZ-MD-V1/refs/heads/main/all/20250909_101450.jpg?token=GHSAT0AAAAAADDCZW7J7VRSQWBMKGW5Z2ME2GCTFCA",
+                                thumbnailUrl: "https://raw.githubusercontent.com/tharusha-md777/THARUZZ-DETABASE/refs/heads/main/media/20250909_101450.jpg",
                                 sourceUrl: "https://whatsapp.com/channel/0029Vb9LTRHInlqISdCfln45",
                                 mediaType: 2,
                                 renderLargerThumbnail: true,
@@ -126,7 +126,7 @@ async function GIFTED_MD_PAIR_CODE(id, num, res) {
                         contextInfo: {
                             externalAdReply: {
                                 title: "ᴛʜᴀʀᴜᴢᴢ ᴏꜰᴄ",
-                                thumbnailUrl: "https://raw.githubusercontent.com/rfjddjsijenfsnsjd/THARUZZ-MD-V1/refs/heads/main/all/20250909_101450.jpg?token=GHSAT0AAAAAADDCZW7J7VRSQWBMKGW5Z2ME2GCTFCA",
+                                thumbnailUrl: "https://raw.githubusercontent.com/tharusha-md777/THARUZZ-DETABASE/refs/heads/main/media/20250909_101450.jpg",
                                 sourceUrl: "https://whatsapp.com/channel/0029Vb9LTRHInlqISdCfln45",
                                 mediaType: 2,
                                 renderLargerThumbnail: true,
